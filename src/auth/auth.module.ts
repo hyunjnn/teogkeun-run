@@ -12,12 +12,13 @@ import jwtConfig from './config/jwt.config';
 
 @Module({
   imports: [
+    UserModule,
     PassportModule,
     JwtModule.registerAsync(jwtConfig.asProvider()),
     ConfigModule.forFeature(jwtConfig),
     ConfigModule.forFeature(refreshJwtConfig),
   ],
-  providers: [JwtStrategy, RefreshJwtStrategy],
-  controllers: [],
+  providers: [AuthService, JwtStrategy, RefreshJwtStrategy],
+  controllers: [AuthController],
 })
 export class AuthModule {}
