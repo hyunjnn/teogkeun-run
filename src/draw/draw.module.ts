@@ -7,5 +7,6 @@ import { CommonModule } from 'src/common/common.module';
   imports: [CommonModule],
   providers: [DrawService],
   controllers: [DrawController],
+  exports: [DrawService],
 })
 export class DrawModule {}
