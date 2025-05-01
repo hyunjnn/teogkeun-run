@@ -5,6 +5,7 @@ import { DrawModule } from './draw/draw.module';
 import { CertifyModule } from './certify/certify.module';
 import { TeamModule } from './team/team.module';
 import { ReportModule } from './report/report.module';
+import { AwsModule } from './aws/aws.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ReportModule } from './report/report.module';
     CertifyModule,
     TeamModule,
     ReportModule,
+    AwsModule,
   ],
 })
 export class AppModule {}
